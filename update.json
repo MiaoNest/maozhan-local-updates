@@ -1,0 +1,13 @@
+{
+  "versionCode": 195,
+  "versionName": "1.0.1",
+  "title": "猫站本地版更新",
+  "dialogMessage": "发现新版本 {latestVersion}。当前版本：{currentVersion}\n\n本次更新：作者信息加载加速、修复 Android 兼容性问题。",
+  "downloadLabel": "Github下载",
+  "backupLabel": "夸克网盘",
+  "laterLabel": "稍后",
+  "changelog": "修复作者头像、名称和作品列表加载；修复详情页验证错误。",
+  "githubUrl": "https://github.com/Eyofficial/maozhan-local-updates/releases",
+  "backupUrl": "https://pan.quark.cn/s/c8f00f29f922",
+  "force": false
+}
