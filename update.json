@@ -7,7 +7,7 @@
   "backupLabel": "夸克网盘",
   "laterLabel": "稍后",
   "changelog": "修复作者头像、名称和作品列表加载；修复详情页验证错误。",
-  "githubUrl": "https://github.com/Eyofficial/maozhan-local-updates/releases",
+  "githubUrl": "https://github.com/MiaoNest/maozhan-local-updates/releases",
   "backupUrl": "https://pan.quark.cn/s/c8f00f29f922",
   "force": false
 }
