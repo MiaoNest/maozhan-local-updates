@@ -1,6 +1,6 @@
 {
-  "versionCode": 195,
-  "versionName": "1.0.1",
+  "versionCode": 194,
+  "versionName": "1.0.0",
   "title": "猫站本地版更新",
   "dialogMessage": "发现新版本 {latestVersion}。当前版本：{currentVersion}\n\n本次更新：作者信息加载加速、修复 Android 兼容性问题。",
   "downloadLabel": "Github下载",
