@@ -2,7 +2,7 @@
   "versionCode": 195,
   "versionName": "1.0.1",
   "title": "猫站本地版更新",
-  "dialogMessage": "开放了NSFW模组的下载权限，炸了再说",
+  "dialogMessage": "发现新版本 {latestVersion}。当前版本：{currentVersion}\n\n开放了NSFW模组的下载权限，炸了再说",
   "downloadLabel": "Github下载",
   "backupLabel": "夸克网盘",
   "changelog": "开放了NSFW模组的下载权限，炸了再说",
