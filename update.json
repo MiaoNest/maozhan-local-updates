@@ -1,12 +1,12 @@
 {
-  "versionCode": 196,
-  "versionName": "1.0.2",
+  "versionCode": 199,
+  "versionName": "1.0.3",
   "title": "猫站本地版更新",
-  "dialogMessage": "发现新版本 {latestVersion}。当前版本：{currentVersion}\n\n注意：原签名文件已丢失，1.0.1 与 1.0.2 签名不一致，本版需要先卸载旧版再安装（Download 里的 ZIP 不受影响）。\n\n支持选择正式版/测试版模组版本；分类筛选已生效；ZIP 包不再带临时文件；首屏更快。",
+  "dialogMessage": "发现新版本 {latestVersion}。当前版本：{currentVersion}\n\n本版与 1.0.2 签名一致，可直接覆盖安装，无需卸载；Download 里的 ZIP 与游戏内已装模组不受影响。\n\n前置与本体合并为一条记录、失败任务可一键重试、作者信息内置本地秒显示、平板支持横屏。",
   "downloadLabel": "Github下载",
   "backupLabel": "夸克网盘",
-  "changelog": "· 详情页可选 默认最新 / 正式版 / 测试版，下载锁定对应版本\n· 搜索框支持数字 ID 与 Steam 链接\n· 修复分类筛选不生效\n· ZIP 只保留模组本体\n· 列表页加载提速（不再逐个拉详情）",
-  "githubUrl": "https://github.com/MiaoNest/maozhan-local-updates/releases/tag/v1.0.2",
+  "changelog": "· 下载记录：前置与本体合并为一组，文件名与磁盘一致，新增一键展开/收拢\n· 一键重试：失败与卡住的任务都会取消后重新下载\n· 作者信息：内置 3000+ 作者快照，进页即显示头像与名字\n· 加载优化：多线路 CDN 择优、列表翻页更顺滑\n· 详情页：修复部分设备无法上滑；点缩略图切换、点大图看全屏\n· 平板/横屏：支持四方向旋转，横屏布局不再错位\n· 打包：命名统一为「模组名 v版本号.zip」，说明文件更完整",
+  "githubUrl": "https://github.com/MiaoNest/maozhan-local-updates/releases/tag/v1.0.3",
   "backupUrl": "https://pan.quark.cn/s/c8f00f29f922",
   "force": false
 }
