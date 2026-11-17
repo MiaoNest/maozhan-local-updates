@@ -1,0 +1,12 @@
+{
+  "updatedAt": "2026-11-17T16:45:00+08:00",
+  "share": "https://share.feijipan.com/s/sOz6ZjZb",
+  "official": {
+    "version": "v0.107.1",
+    "file": "sts2-v0.107.1-android-body.zip"
+  },
+  "beta": {
+    "version": "v0.113.1",
+    "file": "sts2-v0.113.1-android-body.zip"
+  }
+}
