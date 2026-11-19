@@ -1,0 +1,39 @@
+name: update-authors
+
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-authors
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fill missing authors
+        run: python scripts/update_authors.py --limit=400
+
+      - name: Commit authors.json
+        run: |
+          git config user.name "maozhan-bot"
+          git config user.email "maozhan-bot@users.noreply.github.com"
+          git add authors.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+            exit 0
+          fi
+          git commit -m "chore: sync authors ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push
