@@ -28,7 +28,7 @@ jobs:
           python-version: '3.12'
 
       - name: Fill missing authors
-        run: python scripts/update_authors.py --limit=400
+        run: python scripts/update_authors.py --limit=1200
 
       - name: Commit authors.json
         run: |

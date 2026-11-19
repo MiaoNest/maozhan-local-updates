@@ -22,9 +22,10 @@ for a in sys.argv[1:]:
         args[k] = v if v else True
 
 OUT = args.get('out') if isinstance(args.get('out'), str) else 'authors.json'
-LIMIT = int(args.get('limit') or 400)
+LIMIT = int(args.get('limit') or 1200)
 COLLECT_ONLY = bool(args.get('collect-only'))
-WORKERS = 4
+WORKERS = 3
+DELAY = 0.5
 
 
 def get(url, timeout=20):
@@ -86,7 +87,7 @@ def main():
             done['ok'] += 1
         else:
             done['fail'] += 1
-        time.sleep(0.25)
+        time.sleep(DELAY)
 
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         list(pool.map(work, todo))
