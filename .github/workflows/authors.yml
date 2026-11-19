@@ -41,3 +41,8 @@ jobs:
           fi
           git commit -m "chore: sync authors ($(date -u +%Y-%m-%dT%H:%MZ))"
           git push
+
+      # 提交后清一次 jsDelivr 缓存，缩短各镜像拿到新名单的延迟
+      - name: Purge CDN cache
+        if: always()
+        run: curl -s "https://purge.jsdelivr.net/gh/MiaoNest/maozhan-local-updates@main/authors.json" || true
