@@ -19,7 +19,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -28,7 +28,7 @@ jobs:
           python-version: '3.12'
 
       - name: Fill missing authors
-        run: python scripts/update_authors.py --limit=1200
+        run: python scripts/update_authors.py --limit=1800
 
       - name: Commit authors.json
         run: |

@@ -28,27 +28,40 @@ WORKERS = 3
 DELAY = 0.5
 
 
-def get(url, timeout=20):
-    req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=timeout) as r:
-        return r.read()
+def get(url, timeout=20, tries=3):
+    last = None
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except Exception as e:
+            last = e
+            time.sleep(1.5 * (i + 1))
+    raise last
 
 
 def collect_ids():
     ids, page, total_pages, scanned = set(), 1, 1, 0
+    fails = 0
     while page <= total_pages and page <= 200:
         try:
             data = json.loads(get(MODS.format(page=page)).decode('utf-8'))
         except Exception as e:
-            print(f'page {page} failed: {e}, stop')
-            break
+            fails += 1
+            print(f'page {page} failed: {e} (skip, {fails} fails)')
+            if fails >= 12:
+                print('too many page failures, stop')
+                break
+            page += 1
+            continue
         total_pages = data.get('totalPages') or 1
         for it in data.get('items') or []:
             scanned += 1
             if it.get('creatorSteamId'):
                 ids.add(str(it['creatorSteamId']))
         page += 1
-    print(f'scanned {scanned} items, {len(ids)} unique authors, {total_pages} pages')
+    print(f'scanned {scanned} items, {len(ids)} unique authors, {total_pages} pages, {fails} page fails')
     return ids
 
 
