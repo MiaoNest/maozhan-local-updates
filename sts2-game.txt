@@ -1,4 +1,5 @@
 # 塔Ⅱ手机版本体包 QQ 闪传线路：每行一条，App 会随机选一条解析
+# fresh-probe 2026-11-23T02:05
 https://qfile.qq.com/q/bA7QCGcF7G
 https://qfile.qq.com/q/KtsWk1fbWI
 https://qfile.qq.com/q/1cO2aFR9g
