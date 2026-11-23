@@ -5,7 +5,7 @@
   "dialogMessage": "发现新版本 {latestVersion}。当前版本：{currentVersion}\n\n主要更新：加载更快、下载更稳、下载更快，修复塔Ⅱ手机版本体包无法下载问题。\n\n· 作者与日期优先读本地缓存，进页更快\n· 失效线路自动切换，中断无进度自动续传\n· 单任务 16 连接，多任务 6 / 4，8 条线路自动择优\n· 新增本体包真实发布日期，未登记默认当天\n· 修复跳页弹窗被输入法顶飞、详情作者显示异常\n\n完整更新日志见 GitHub 发布页。\n\n签名与 1.0.4 一致，可直接覆盖安装。",
   "downloadLabel": "Github下载",
   "backupLabel": "夸克网盘",
-  "changelog": "· 本次重点：加载更快、下载更稳、下载更快\n· 作者与日期优先读本地缓存\n· 失效线路自动切换，中断无进度自动续传\n· 单任务 16 连接，多任务 6 / 4，8 条线路自动择优\n· 新增本体包真实发布日期\n· 修复塔Ⅱ手机版本体包无法下载\n· 修复跳页弹窗被输入法顶飞\n· 修复详情作者显示 Steam Workshop\n· 完整更新日志见 GitHub 发布页",
+  "changelog": "本次更新重点：优化加载速度、增强下载稳定性、提升下载速度；同时修复了塔Ⅱ手机版本体包无法正常下载的问题。\n· 完整更新日志见 GitHub 发布页",
   "githubUrl": "https://github.com/MiaoNest/maozhan-local-updates/releases/tag/v1.0.5",
   "backupUrl": "https://pan.quark.cn/s/c8f00f29f922",
   "force": false
